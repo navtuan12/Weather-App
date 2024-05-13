@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0.6"
+    android:orientation="vertical"
+    android:stateListAnimator="@null"
+    tools:context=".Controllers.HomeFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="end|bottom"
+        android:clickable="true"
+        android:contentDescription="@string/add_task_button"
+        android:src="@drawable/privacy_add" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_weight="1" />
+
+</RelativeLayout>
