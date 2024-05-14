@@ -1,4 +1,4 @@
-package com.example.weatherapp.Controllers;
+package com.example.weatherapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -62,4 +62,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
     implementation("com.tencent:mmkv:1.3.2")
+    implementation("com.github.tsuryo:Swipeable-RecyclerView:1.1")
+    implementation("androidx.recyclerview:recyclerview:+")
+
 }

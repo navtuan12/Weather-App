@@ -6,13 +6,18 @@
     android:id="@+id/map_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+<<<<<<< HEAD
     tools:context=".Frag_Dashboard">
+=======
+    tools:context=".Fragments.WeatherDashboardFragment">
+>>>>>>> 1a750d1fdca21661eef790d9e51b986481d32a67
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+<<<<<<< HEAD
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -384,5 +389,10 @@
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
+=======
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+>>>>>>> 1a750d1fdca21661eef790d9e51b986481d32a67
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
