@@ -177,7 +177,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
                 //Remove swiped item from list and notify the RecyclerView
-                int position = viewHolder.getAbsoluteAdapterPosition();
+                int position = viewHolder.getAdapterPosition();
                 Weather weather = weathersList.get(position);
                 weathersList.remove(position);
                 weatherRef.child(weather.getKey()).removeValue();
