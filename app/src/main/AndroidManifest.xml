@@ -25,7 +25,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Controllers.MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,13 +34,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Controllers.HomeActivity"
+            android:name=".Activities.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".Controllers.SignUpActivity"
+            android:name=".Activities.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".Controllers.LoginActivity"
+            android:name=".Activities.LoginActivity"
             android:exported="true"/>
     </application>
 

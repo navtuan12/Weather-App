@@ -1,4 +1,4 @@
-package com.example.weatherapp.Controllers;
+package com.example.weatherapp.Fragments;
 
 import android.app.Dialog;
 import android.content.DialogInterface;

@@ -1,4 +1,4 @@
-package com.example.weatherapp.Controllers;
+package com.example.weatherapp.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.weatherapp.Fragments.AccountFragment;
+import com.example.weatherapp.Fragments.HomeFragment;
 import com.example.weatherapp.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;

@@ -1,4 +1,4 @@
-package com.example.weatherapp.Controllers;
+package com.example.weatherapp.Fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -26,7 +26,6 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.developer.gbuttons.BuildConfig;
 import com.example.weatherapp.Model.Weather;
 import com.example.weatherapp.R;
 import com.example.weatherapp.Utils.ApiService;
@@ -177,7 +176,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
                 //Remove swiped item from list and notify the RecyclerView
-                int position = viewHolder.getAbsoluteAdapterPosition();
+                int position = viewHolder.getAdapterPosition();
                 Weather weather = weathersList.get(position);
                 weathersList.remove(position);
                 weatherRef.child(weather.getKey()).removeValue();

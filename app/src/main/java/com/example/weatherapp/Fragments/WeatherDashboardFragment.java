@@ -1,4 +1,4 @@
-package com.example.weatherapp.Controllers;
+package com.example.weatherapp.Fragments;
 
 import android.os.Bundle;
 

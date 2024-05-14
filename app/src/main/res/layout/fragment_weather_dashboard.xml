@@ -6,13 +6,15 @@
     android:id="@+id/map_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".Controllers.WeatherDashboardFragment">
+    tools:context=".Fragments.WeatherDashboardFragment">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
