@@ -43,7 +43,12 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.WeatherV
 
     @Override
     public void onBindViewHolder(@NonNull WeatherViewHolder holder, @SuppressLint("RecyclerView") int position) {
-
+        Weather weather = weathersList.get(position);
+        try {
+            holder.bind(weather);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
