@@ -64,5 +64,6 @@ dependencies {
     implementation("com.tencent:mmkv:1.3.2")
     implementation("com.github.tsuryo:Swipeable-RecyclerView:1.1")
     implementation("androidx.recyclerview:recyclerview:+")
+    implementation("com.github.Gruzer:simple-gauge-android:0.3.1")
 
 }
