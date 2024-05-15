@@ -215,9 +215,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_03"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="03"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -242,9 +243,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_04"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="04"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -269,9 +271,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_05"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="05"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -296,9 +299,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_06"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="06"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -323,9 +327,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_07"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="07"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -350,9 +355,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_08"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="08"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -377,9 +383,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_09"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="09"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -404,9 +411,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_10"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="10"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -431,9 +439,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_11"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="11"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -458,9 +467,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_12"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="12"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -485,9 +495,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_13"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="13"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -512,9 +523,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_14"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="14"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -539,9 +551,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_15"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="15"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -566,9 +579,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_16"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="16"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
