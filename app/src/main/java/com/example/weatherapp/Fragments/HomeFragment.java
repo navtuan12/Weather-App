@@ -43,6 +43,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.tencent.mmkv.MMKV;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -69,7 +70,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     private Context context;
     private JsonHandler jsonHandler;
     private List<String> listJsonResponse;
-    private MMKV kv;
+    private MMKV kv = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,6 +89,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 .build();
 
         weather_api = retrofit_weather_api.create(ApiService.class);
+
+        kv = MMKV.defaultMMKV();
     }
 
     @Override
@@ -127,12 +130,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                             Call<ResponseBody> getWeatherCall = weather_api.getWeatherData(WEATHER_API_KEY, weather.getLocation());
                             Response<ResponseBody> weatherResponse = getWeatherCall.execute();
                             if(weatherResponse.code() == 200) {
-                                weather = jsonHandler.getWeather(weatherResponse.body().string());
+                                String weatherMsg = weatherResponse.body().string();
+                                weather = jsonHandler.getWeather(weatherMsg);
                                 weather.setKey(weatherSnapshot.getKey());
-                                listJsonResponse.add(weatherResponse.body().string());
+                                listJsonResponse.add(weatherMsg);
                                 weathersList.add(weather);
                             }
                         } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        } catch (ParseException e) {
                             throw new RuntimeException(e);
                         }
                     }
@@ -154,9 +160,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(context, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override public void onItemClick(View view, int position) {
-                        kv = MMKV.defaultMMKV();
+                    @Override
+                    public void onItemClick(View view, int position) {
                         kv.encode("weatherJson",listJsonResponse.get(position));
+                        Log.d("Forecast-msg", listJsonResponse.toString());
                         Fragment fragment = new WeatherDashboardFragment();
                         FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
                         fm.replace(R.id.fragment_nav_container, fragment).commit();
@@ -237,6 +244,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                                 });
                             }
                         } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        } catch (ParseException e) {
                             throw new RuntimeException(e);
                         }
                     });

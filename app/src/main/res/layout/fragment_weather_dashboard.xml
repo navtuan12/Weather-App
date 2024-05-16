@@ -27,7 +27,7 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
                 <RelativeLayout
-                    android:layout_width="250dp"
+                    android:layout_width="400dp"
                     android:layout_height="250dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginLeft="5dp"
@@ -607,9 +607,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_17"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="17"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -634,9 +635,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_18"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="18"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -661,9 +663,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_19"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="19"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -688,9 +691,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_20"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="20"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -715,9 +719,10 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_21"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="21"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -742,9 +747,38 @@
                                     android:gravity="center"
                                     android:layout_centerVertical="true">
                                     <TextView
+                                        android:id="@+id/tv_hour_22"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="00"
+                                        android:text="22"
+                                        android:textSize="25dp"
+                                        android:layout_marginBottom="10dp"/>
+                                    <ImageView
+                                        android:layout_width="33dp"
+                                        android:layout_height="33dp"
+                                        android:src="@drawable/humidity"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="33"
+                                        android:textSize="38dp"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_centerVertical="true">
+                                    <TextView
+                                        android:id="@+id/tv_hour_23"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="23"
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
@@ -815,6 +849,7 @@
                             android:textSize="45dp" />
 
                         <TextView
+                            android:id="@+id/tv_uv_reas"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -1084,6 +1119,7 @@
                             android:textSize="45dp" />
 
                         <TextView
+                            android:id="@+id/tv_feelslike_reas"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -1252,6 +1288,7 @@
                             android:textSize="45dp" />
 
                         <TextView
+                            android:id="@+id/tv_dewpoint"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -1394,6 +1431,7 @@
                         </LinearLayout>
                     </LinearLayout>
                     <ImageView
+                        android:id="@+id/iv_moonphase"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_centerVertical="true"
@@ -1437,31 +1475,71 @@
                             />
                     </LinearLayout>
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
                         android:gravity="center"
                         android:orientation="vertical">
 
-
                         <TextView
-                            android:id="@+id/tv_population"
+                            android:id="@+id/tv_averages"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="left"
                             android:fontFamily="@font/interbold"
-                            android:text="Nan"
+                            android:text="-2"
                             android:textColor="@color/white"
-                            android:textSize="25dp" />
+                            android:textSize="40dp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/regular"
-                            android:text="Residents"
-                            android:textColor="@color/white"
-                            android:textSize="20dp"/>
+                        <RelativeLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/regular"
+                                android:text="Today"
+                                android:textColor="@color/white"
+                                android:layout_alignParentLeft="true"
+                                android:textSize="15dp"/>
+                            <TextView
+                                android:id="@+id/tv_today_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/interbold"
+                                android:text="H:19"
+                                android:textColor="@color/white"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:textSize="15dp"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/regular"
+                                android:text="Average"
+                                android:textColor="@color/white"
+                                android:layout_alignParentLeft="true"
+                                android:textSize="15dp"/>
+                            <TextView
+                                android:id="@+id/tv_average_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/interbold"
+                                android:text="H:21"
+                                android:textColor="@color/white"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:textSize="15dp"/>
+                        </RelativeLayout>
                     </LinearLayout>
                 </RelativeLayout>
                 <RelativeLayout
@@ -1499,25 +1577,11 @@
                         android:layout_centerInParent="true"
                         android:gravity="center"
                         android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/tv_self_sulficiency"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/interbold"
-                            android:text="Nan%"
-                            android:textColor="@color/white"
-                            android:textSize="25dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/regular"
-                            android:text="Self-sufficiency"
-                            android:textColor="@color/white"
-                            android:textSize="20dp" />
+                        <com.ekn.gruzer.gaugelibrary.ArcGauge
+                            android:id="@+id/gauge_pressure"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="20dp"/>
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
