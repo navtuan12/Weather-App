@@ -88,6 +88,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 .build();
 
         weather_api = retrofit_weather_api.create(ApiService.class);
+
+        kv = MMKV.defaultMMKV();
     }
 
     @Override
@@ -155,7 +157,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(context, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
                     @Override public void onItemClick(View view, int position) {
-                        kv = MMKV.defaultMMKV();
                         kv.encode("weatherJson",listJsonResponse.get(position));
                         Fragment fragment = new WeatherDashboardFragment();
                         FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();

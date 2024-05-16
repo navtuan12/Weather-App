@@ -849,6 +849,7 @@
                             android:textSize="45dp" />
 
                         <TextView
+                            android:id="@+id/tv_uv_reas"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -1118,6 +1119,7 @@
                             android:textSize="45dp" />
 
                         <TextView
+                            android:id="@+id/tv_feelslike_reas"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -1286,6 +1288,7 @@
                             android:textSize="45dp" />
 
                         <TextView
+                            android:id="@+id/tv_dewpoint"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -1428,6 +1431,7 @@
                         </LinearLayout>
                     </LinearLayout>
                     <ImageView
+                        android:id="@+id/iv_moonphase"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_centerVertical="true"
@@ -1478,7 +1482,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_population"
+                            android:id="@+id/tv_averages"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -1501,6 +1505,7 @@
                                 android:layout_alignParentLeft="true"
                                 android:textSize="15dp"/>
                             <TextView
+                                android:id="@+id/tv_today_temp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -1524,6 +1529,7 @@
                                 android:layout_alignParentLeft="true"
                                 android:textSize="15dp"/>
                             <TextView
+                                android:id="@+id/tv_average_temp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -1571,12 +1577,11 @@
                         android:layout_centerInParent="true"
                         android:gravity="center"
                         android:orientation="vertical">
-
                         <com.ekn.gruzer.gaugelibrary.ArcGauge
-                            android:id="@+id/halfGauge"
-                            android:layout_marginTop="20dp"
+                            android:id="@+id/gauge_pressure"
                             android:layout_width="120dp"
-                            android:layout_height="120dp" />
+                            android:layout_height="120dp"
+                            android:layout_marginTop="20dp"/>
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>

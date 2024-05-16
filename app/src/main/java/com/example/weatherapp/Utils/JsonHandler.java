@@ -14,7 +14,7 @@ import java.util.List;
 
 public class JsonHandler {
     ObjectMapper objectMapper = new ObjectMapper();
-    private Forecast getForeCast(JsonNode weatherJson){
+    public Forecast getForeCast(JsonNode weatherJson){
         String sunrise = weatherJson.get("forecast").get("forecastday").get(0).get("astro").get("sunrise").asText();
         String sunset = weatherJson.get("forecast").get("forecastday").get(0).get("astro").get("sunset").asText();
         String moonrise = weatherJson.get("forecast").get("forecastday").get(0).get("astro").get("moonrise").asText();
