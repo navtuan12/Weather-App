@@ -65,4 +65,5 @@ dependencies {
     implementation("com.github.tsuryo:Swipeable-RecyclerView:1.1")
     implementation("androidx.recyclerview:recyclerview:+")
     implementation("com.github.Gruzer:simple-gauge-android:0.3.1")
+    implementation("com.github.NitishGadangi:TypeWriter-TextView:v1.3")
 }

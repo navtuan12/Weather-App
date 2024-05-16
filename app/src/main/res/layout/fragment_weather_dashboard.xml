@@ -7,8 +7,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".Fragments.WeatherDashboardFragment">
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ListWeatherButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:clickable="true"
+        android:contentDescription="@string/add_task_button"
+        android:src="@drawable/baseline_format_list_bulleted_24" />
     <ScrollView
+        android:id="@+id/sr_br_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,6 +109,57 @@
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/menu_des">
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ai_icon"/>
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/interbold"
+                        android:textColor="@color/black"
+                        android:text="OpenAI"
+                        android:textSize="15dp"
+                        android:layout_marginRight="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp"
+                    android:padding="10dp">
+                    <com.nitish.typewriterview.TypeWriterView
+                        android:id="@+id/typeWriterView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/interbold"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </RelativeLayout>
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/row2"
                 android:layout_width="wrap_content"
@@ -138,14 +200,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_0"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_0"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -166,14 +230,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_1"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -194,14 +260,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_2"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -222,14 +290,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_3"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -250,14 +320,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_4"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_4"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -278,14 +350,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_5"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_5"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -306,14 +380,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_6"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_6"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -334,14 +410,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_7"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_7"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -362,14 +440,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_8"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_8"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -390,14 +470,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_9"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_9"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -418,14 +500,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_10"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_10"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -446,14 +530,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_11"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_11"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -474,14 +560,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_12"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_12"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -502,14 +590,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_13"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_13"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -530,14 +620,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_14"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_14"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -558,14 +650,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_15"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_15"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -586,14 +680,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_16"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_16"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -614,14 +710,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_17"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_17"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -642,14 +740,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_18"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_18"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -670,14 +770,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_19"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_19"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -698,14 +800,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_20"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_20"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -726,14 +830,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_21"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_21"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -754,14 +860,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_22"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_22"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                             <RelativeLayout
@@ -782,14 +890,16 @@
                                         android:textSize="25dp"
                                         android:layout_marginBottom="10dp"/>
                                     <ImageView
+                                        android:id="@+id/iv_23"
                                         android:layout_width="33dp"
                                         android:layout_height="33dp"
                                         android:src="@drawable/humidity"/>
                                     <TextView
+                                        android:id="@+id/tv_temp_23"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="33"
-                                        android:textSize="38dp"/>
+                                        android:textSize="30dp"/>
                                 </LinearLayout>
                             </RelativeLayout>
                         </LinearLayout>
@@ -1581,7 +1691,7 @@
                             android:id="@+id/gauge_pressure"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
-                            android:layout_marginTop="20dp"/>
+                            android:layout_marginTop="20dp" />
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>

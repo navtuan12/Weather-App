@@ -163,7 +163,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                     @Override
                     public void onItemClick(View view, int position) {
                         kv.encode("weatherJson",listJsonResponse.get(position));
-                        Log.d("Forecast-msg", listJsonResponse.toString());
                         Fragment fragment = new WeatherDashboardFragment();
                         FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
                         fm.replace(R.id.fragment_nav_container, fragment).commit();

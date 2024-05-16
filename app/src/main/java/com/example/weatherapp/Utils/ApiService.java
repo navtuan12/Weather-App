@@ -16,7 +16,7 @@ public interface ApiService {
     //https://api.openai.com/
     @Headers({ "Content-Type: application/json"})
     @POST("v1/chat/completions")
-    Call<ResponseBody> getQuestionData(@Header("Authorization") String token,
+    Call<ResponseBody> getRecommendation(@Header("Authorization") String token,
                                        @Body RequestBody jsonQuery);
 
     //http://api.weatherapi.com/

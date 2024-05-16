@@ -30,9 +30,13 @@ public class Weather {
     String minTemp;
     String uv;
     Forecast forecast;
+    String background;
+    String currentTime;
 
-    public Weather(String location, String temp, String feelslike, String precip_mm, String vis_km, String humidity, String pressure_mb,
+    public Weather(String background, String currentTime, String location, String temp, String feelslike, String precip_mm, String vis_km, String humidity, String pressure_mb,
                    String wind_degree, String windSpeed, String gust, String condition, String imageUrl, String maxTemp, String minTemp, String uv, Forecast forecast) {
+        this.background = background;
+        this.currentTime = currentTime;
         this.location = location;
         this.temp = temp;
         this.feelslike = feelslike;

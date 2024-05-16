@@ -1,5 +1,6 @@
 package com.example.weatherapp.Utils;
 
+import android.graphics.Path;
 import android.util.Log;
 
 import com.example.weatherapp.Model.Forecast;
@@ -54,7 +55,7 @@ public class JsonHandler {
 
         for(int i = 0; i < 24; i++){
             conditionImage.add(weatherJson.get("forecast").get("forecastday").get(0).get("hour").get(i).get("condition").get("icon").asText());
-            forecast_temp.add(weatherJson.get("forecast").get("forecastday").get(0).get("hour").get(i).get("temp_c").asText());
+            forecast_temp.add(Integer.toString(weatherJson.get("forecast").get("forecastday").get(0).get("hour").get(i).get("temp_c").asInt()));
             forecast_humidity.add(weatherJson.get("forecast").get("forecastday").get(0).get("hour").get(i).get("humidity").asText());
             forecast_uv.add(weatherJson.get("forecast").get("forecastday").get(0).get("hour").get(i).get("uv").asText());
             forecast_vis.add(weatherJson.get("forecast").get("forecastday").get(0).get("hour").get(i).get("vis_km").asText());
@@ -72,7 +73,11 @@ public class JsonHandler {
     public Weather getWeather(String msg) throws JsonProcessingException, ParseException {
         JsonNode weatherJson = objectMapper.readTree(msg);
         Forecast forecast = getForeCast(weatherJson);
+        String currentTime = weatherJson.get("location").get("localtime").asText();
+        currentTime = currentTime.substring(11, 12);
         return new Weather(
+                setBackground(currentTime, forecast),
+                currentTime,
                 weatherJson.get("location").get("name").asText(),
                 Integer.toString(weatherJson.get("current").get("temp_c").asInt()),
                 Integer.toString(weatherJson.get("current").get("feelslike_c").asInt()),
@@ -90,5 +95,35 @@ public class JsonHandler {
                 Integer.toString(weatherJson.get("current").get("uv").asInt()),
                 forecast
         );
+    }
+
+    public String setBackground(String currentTime, Forecast forecast){
+        String sunset = forecast.getSunset();
+        int isunset = Integer.parseInt(sunset.substring(0,1));
+        int curr = Integer.parseInt(currentTime);
+        if(curr < isunset) return "sunny_br";
+        else if(curr > isunset) return "night_br";
+        else return "sunset_br";
+    }
+
+    public String getPromt(String location){
+        return String.format(
+                "{\n" +
+                        "  \"model\": \"gpt-3.5-turbo\",\n" +
+                        "  \"messages\": [\n" +
+                        "    {\n" +
+                        "      \"role\": \"user\",\n" +
+                        "      \"content\": \"Recommend what should do with the weather conditions at %1$s at the moment. Response max is 50 words and in JSON. Example { 'recommendation': }, replace single quote in example to double quote.\"\n" +
+                        "    }\n" +
+                        "  ]\n" +
+                        "}", location
+        );
+    }
+
+    public String getRecommend(String msg) throws JsonProcessingException {
+        JsonNode OpenAiJson = objectMapper.readTree(msg);
+        String recommendMsg = OpenAiJson.get("choices").get(0).get("message").get("content").asText();
+        JsonNode recommendJson = objectMapper.readTree(recommendMsg);
+        return recommendJson.get("recommendation").asText();
     }
 }
