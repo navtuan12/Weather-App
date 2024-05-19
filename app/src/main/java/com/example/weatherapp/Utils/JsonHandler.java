@@ -74,7 +74,8 @@ public class JsonHandler {
         JsonNode weatherJson = objectMapper.readTree(msg);
         Forecast forecast = getForeCast(weatherJson);
         String currentTime = weatherJson.get("location").get("localtime").asText();
-        currentTime = currentTime.substring(11, 12);
+        currentTime = currentTime.substring(11, 13);
+        Log.d("currenttime",currentTime);
         return new Weather(
                 setBackground(currentTime, forecast),
                 currentTime,
@@ -99,7 +100,8 @@ public class JsonHandler {
 
     public String setBackground(String currentTime, Forecast forecast){
         String sunset = forecast.getSunset();
-        int isunset = Integer.parseInt(sunset.substring(0,1));
+        int isunset = Integer.parseInt(sunset.substring(0,2));
+        Log.d("sunset",Integer.toString(isunset));
         int curr = Integer.parseInt(currentTime);
         if(curr < isunset) return "sunny_br";
         else if(curr > isunset) return "night_br";
