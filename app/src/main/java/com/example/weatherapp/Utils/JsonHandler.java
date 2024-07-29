@@ -103,10 +103,6 @@ public class JsonHandler {
     public String setBackground(String currentTime, Forecast forecast){
         String sunset = forecast.getSunset();
         int isunset = Integer.parseInt(sunset.substring(0,2));
-<<<<<<< HEAD
-=======
-        Log.d("sunset",Integer.toString(isunset));
->>>>>>> 245aa493aca573f924d87cb0819aed9f7d4ae3d0
         int curr = Integer.parseInt(currentTime);
         if(curr < isunset) return "sunny_br";
         else if(curr > isunset) return "night_br";
