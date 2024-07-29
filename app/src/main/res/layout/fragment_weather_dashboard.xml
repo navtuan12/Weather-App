@@ -1544,6 +1544,7 @@
                         android:id="@+id/iv_moonphase"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_centerVertical="true"
                         android:layout_alignParentRight="true"
                         android:src="@drawable/moon_phase"/>

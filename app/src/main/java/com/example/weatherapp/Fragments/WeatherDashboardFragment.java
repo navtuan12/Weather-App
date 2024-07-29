@@ -47,7 +47,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class WeatherDashboardFragment extends Fragment implements View.OnClickListener{
-    private final String token = "REPLACE YOUR OPENAI API";
+    private final String token = "replace openai api";
     private final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private TextView tv_location, tv_temp, tv_condition, tv_maxtemp,
                 tv_mintemp, tv_uv, tv_uv_reas, tv_sunset, tv_sunrise,

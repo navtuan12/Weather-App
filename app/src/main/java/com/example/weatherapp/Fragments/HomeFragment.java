@@ -57,7 +57,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeFragment extends Fragment implements View.OnClickListener{
 
-    private final String WEATHER_API_KEY = "60fa5cee8d524f52999214906241904";
+    private final String WEATHER_API_KEY = "6f57c6de50444e0cba264047241406";
     private FloatingActionButton addWeatherButton;
     private DatabaseReference weatherRef;
     private ValueEventListener weathersValueEventListener;

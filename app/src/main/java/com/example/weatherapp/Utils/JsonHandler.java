@@ -35,10 +35,10 @@ public class JsonHandler {
         String moonrise = weatherJson.get("forecast").get("forecastday").get(0).get("astro").get("moonrise").asText();
         String moonset = weatherJson.get("forecast").get("forecastday").get(0).get("astro").get("moonset").asText();
 
-        sunrise = formatDate(sunrise);
-        sunset = formatDate(sunset);
-        moonrise = formatDate(moonrise);
-        moonset = formatDate(moonset);
+//        sunrise = formatDate(sunrise);
+//        sunset = formatDate(sunset);
+//        moonrise = formatDate(moonrise);
+//        moonset = formatDate(moonset);
 
         String illumination = weatherJson.get("forecast").get("forecastday").get(0).get("astro").get("moon_illumination").asText();
         String avgtemp = Integer.toString(weatherJson.get("forecast").get("forecastday").get(0).get("day").get("avgtemp_c").asInt());
@@ -74,7 +74,10 @@ public class JsonHandler {
         JsonNode weatherJson = objectMapper.readTree(msg);
         Forecast forecast = getForeCast(weatherJson);
         String currentTime = weatherJson.get("location").get("localtime").asText();
-        currentTime = currentTime.substring(11, 12);
+        currentTime = currentTime.substring(11, 13);
+        if(currentTime.contains(":")){
+            currentTime=currentTime.substring(0,1);
+        }
         return new Weather(
                 setBackground(currentTime, forecast),
                 currentTime,
@@ -99,7 +102,7 @@ public class JsonHandler {
 
     public String setBackground(String currentTime, Forecast forecast){
         String sunset = forecast.getSunset();
-        int isunset = Integer.parseInt(sunset.substring(0,1));
+        int isunset = Integer.parseInt(sunset.substring(0,2));
         int curr = Integer.parseInt(currentTime);
         if(curr < isunset) return "sunny_br";
         else if(curr > isunset) return "night_br";
